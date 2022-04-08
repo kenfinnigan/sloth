@@ -12,7 +12,7 @@ import (
 	"strings"
 	"time"
 
-	openslov1alpha "github.com/OpenSLO/oslo/pkg/manifest/v1alpha"
+	openslov1 "github.com/OpenSLO/oslo/pkg/manifest/v1"
 	prometheusmodel "github.com/prometheus/common/model"
 	"gopkg.in/alecthomas/kingpin.v2"
 
@@ -355,7 +355,7 @@ func generateOpenSLO(ctx context.Context, logger log.Logger, windowsRepo alert.W
 	info := info.Info{
 		Version: info.Version,
 		Mode:    info.ModeCLIGenOpenSLO,
-		Spec:    openslov1alpha.APIVersion,
+		Spec:    openslov1.APIVersion,
 	}
 
 	result, err := generateRules(ctx, logger, info, windowsRepo, disableRecs, disableAlerts, disableOptimizedRules, extraLabels, slos)

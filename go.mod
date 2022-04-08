@@ -97,3 +97,6 @@ require (
 	sigs.k8s.io/structured-merge-diff/v4 v4.2.1 // indirect
 	sigs.k8s.io/yaml v1.3.0 // indirect
 )
+
+//TODO Remove when not
+replace github.com/OpenSLO/oslo v0.2.2-0.20210629193748-b882029ce777 => ../oslo
